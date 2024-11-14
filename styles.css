@@ -1,0 +1,239 @@
+body {
+    background-color: hsl(180, 52%, 96%);
+    font-family: "League Spartan", sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.page-header {
+    height: 9em;
+    background-color: darkcyan;
+    margin-bottom: 1.8em;
+    background-image: url('./images/bg-header-desktop.svg');
+}
+
+.filter-section {
+    display: flex;
+    visibility: hidden;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    box-sizing: content-box;
+    bottom: 3.4em;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    box-shadow: 2px 15px 5px rgba(108, 187, 201, 0.081);
+}
+
+.filtr-chip-container {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1em;
+}
+
+.btn-icon-right {
+    background-color: darkcyan;
+    padding: 0.3em 0.6em;
+    text-transform: capitalize;
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    color: white;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.btn-icon-left {
+    background-color: hsl(180, 31%, 95%);
+    padding: 0.3em 0.6em;
+    color: darkcyan;
+    text-transform: capitalize;
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.btn-icon-right:hover {
+    background-color: black;
+    transition: 120ms;
+}
+
+.close-btn {
+    text-transform: capitalize;
+    font-weight: bold;
+    color: grey;
+}
+
+.close-btn:hover {
+    color: darkcyan;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#card-section {
+    width: 100%;
+}
+
+.job-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 80%;
+    background-color: white;
+    color: darkcyan;
+    padding: 2em;
+    border-radius: 0.5em;
+    box-shadow: 2px 15px 5px rgba(108, 187, 201, 0.081);
+    margin-bottom: 1.5em;
+}
+
+.job-card:hover {
+    border-left: 0.35em solid darkcyan;
+    transition: 100ms;
+    max-width: calc(80% -0.35em);
+}
+
+.job-section {
+    display: flex;
+}
+
+.logo {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+    padding-right: 2em;
+}
+
+.is-new {
+    text-transform: uppercase;
+    background-color: darkcyan;
+    color: white;
+    padding: 0.35em 0.5em;
+    border-radius: 1em;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-right: 0.4em;
+}
+
+.is-featured {
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    padding: 0.35em 0.5em;
+    border-radius: 1em;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.job-metadata h3 {
+    text-transform: capitalize;
+    color: black;
+}
+
+.job-metadata h3:hover {
+    color: darkcyan;
+    transition: 120ms;
+    cursor: pointer;
+}
+
+.company-name {
+    font-weight: bold;
+    margin-right: 0.9em;
+}
+
+.geo-time-data {
+    display: flex;
+    color: grey;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.tablets-section {
+    display: flex;
+    max-width: 40%;
+}
+
+.tablets-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    max-width: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+
+.tablet-chip {
+    background-color: hsl(180, 31%, 95%);
+    padding: 0.3em 0.6em;
+    text-transform: capitalize;
+    border-radius: 0.3em;
+    font-weight: bold;
+}
+
+.tablet-chip:hover {
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+    transition: 120ms;
+    cursor: pointer;
+}
+
+.geo-time-data span:not(:last-child)::after {
+    content: "•"; 
+    margin: 0 0.5em; 
+    color: grey; 
+}
+
+@media (max-width: 768px) {
+    .job-card {
+        flex-direction: column;
+        margin-bottom: 3em;
+        position: relative;
+        max-width: 70%;
+    }
+    
+    .job-card:hover {
+        max-width: 70%;
+    }
+
+    .filter-section {
+        max-width: 70%;
+    }
+
+    .logo {
+        position: absolute; 
+        top: -1.8em; 
+        width: 4em;
+        height: 4em;
+    }
+
+    .job-section {
+        max-width: 100%;
+        border-bottom: 0.1em solid lightgray;
+        padding-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    .tablets-section {
+        max-width: 100%;
+    }
+
+    .tablets-list {
+        max-width: 100%;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+}
